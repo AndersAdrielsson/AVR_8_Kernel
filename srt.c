@@ -106,16 +106,6 @@ static void spawndispatch(thread *queue) {
 	dispatch(disp);
 }
 
-/*static void rec(thread *queue) {
-	thread q = dequeue(queue);
-	if (q->delay) {
-		enqueue(q, queue);
-		rec(queue);
-	} else {
-		dispatch(q);
-	}
-}*/
-
 void spawn(void function(int), uint8_t arg, uint8_t delay) {
 	thread newp;
 	DISABLE();
