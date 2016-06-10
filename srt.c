@@ -25,7 +25,7 @@ struct thread_block {
 	uint8_t delay;						// delay, number of interrupts
 	uint8_t is_main;
 	uint8_t priority;					// if other thread was dispatched in this threads place
-	void (*function)(int/*, more areguments*/);				// code to run
+	void (*function)(int/*, more arguments*/);				// code to run
 	uint8_t arg;						// argument to the above
 	thread next;						// for use in linked lists
 	jmp_buf context;					// machine state
